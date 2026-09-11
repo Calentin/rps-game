@@ -1,5 +1,5 @@
 function computerPlay() {
-  const choices = ["rock", "paper", "scissors"];
+  const choices = ['rock', 'paper', 'scissors'];
   const randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
 }
@@ -93,7 +93,7 @@ function game() {
 }
 
 function startCountdown() {
-  let secondsRemaining = 10;
+  let secondsRemaining = 5;
   console.log("Prepare yourself, human. The arena opens in...");
   console.log(secondsRemaining);
 
@@ -148,7 +148,7 @@ function startGame() {
       "On Windows, press Ctrl + Shift + J, or press F12 and select Console.\n" +
       "On a Mac, press Command + Option + J.\n\n" +
       "When the developer tools open, dock them at the bottom of the browser window so the logs are easy to read.\n\n" +
-      "Click OK and I will begin the 10-second countdown.",
+      "Click OK and I will begin the 5-second countdown.",
   );
 
   startCountdown();
