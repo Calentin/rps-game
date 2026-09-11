@@ -18,3 +18,26 @@ function playRound(playerSelection, computerSelection) {
         return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
 }
+
+
+function getPlayerChoice() {
+    while (true) {
+        let choice = prompt("Choose: rock, paper or scissors");
+
+        if (choice === null) {
+            return null;
+        }
+
+        choice = choice.trim().toLowerCase();
+
+        if (
+            choice === "rock" ||
+            choice === "paper" ||
+            choice === "scissors"
+        ) {
+            return choice;
+        }
+        alert("Invalid choice. Please choose rock, paper or scissors.");
+        console.log("Invalid choice. Try again.");
+    }
+}
