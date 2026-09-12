@@ -19,12 +19,14 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function getPlayerChoice() {
+function getPlayerChoice(playerScore, computerScore) {
   while (true) {
     let choice = prompt("Choose: rock, paper or scissors");
 
     if (choice === null) {
-      console.log("Fleeing already? Coward. The game ends here, human.");
+      console.log(
+        `The challenge ends without a victor. Final score — You: ${playerScore}, Me: ${computerScore}.`,
+      );
       return null;
     }
 
@@ -53,13 +55,9 @@ function game() {
   let computerScore = 0;
 
   while (playerScore < 3 && computerScore < 3) {
-    const playerSelection = getPlayerChoice();
+    const playerSelection = getPlayerChoice(playerScore, computerScore);
 
-    // Cancel ends the game before a new round is played.
     if (playerSelection === null) {
-      console.log(
-        `The challenge ends without a victor. Final score — You: ${playerScore}, Me: ${computerScore}.`,
-      );
       return false;
     }
 
